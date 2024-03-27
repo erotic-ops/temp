@@ -14,7 +14,7 @@ def main(context):
     r = redis.Redis(host=environ.get("HOST"), port=environ.get("PORT"), password=environ.get("PASSWORD"), decode_responses=True)
 
     # Get the file id
-    file_id = json.loads(context.req.body_raw["$id"])
+    file_id = json.loads(context.req.body_raw)["$id"]
 
     # Generate a random number
     random_number = generate_random_number()
