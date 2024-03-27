@@ -11,7 +11,9 @@ def generate_random_number():
 
 # Main function executed by Appwrite
 def main(context):
-    r = redis.Redis(host=environ.get("HOST"), port=environ.get("PORT"), password=environ.get("PASSWORD"), decode_responses=True)
+    r = redis.Redis(
+        host=environ.get("REDIS_HOST"), port=int(environ.get("REDIS_PORT")), password=environ.get("REDIS_PASSWORD"), decode_responses=True
+    )
 
     # Get the file id
     file_id = json.loads(context.req.body_raw)["$id"]
