@@ -1,0 +1,5 @@
+wheel
+flask
+pillow
+redis
+appwrite
