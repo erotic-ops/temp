@@ -41,5 +41,5 @@ def main(context):
         return context.res.json({"status": "OK"})
 
     except Exception as e:
-        conole.error(e)
+        context.error(e)
         return context.res.json({"status": "ERROR"})
