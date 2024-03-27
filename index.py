@@ -29,6 +29,7 @@ def main(context):
     context.error("Hello, Errors!")
 
     # Parse the event data
+    print(os.environ)
     print(os.environ.get("APPWRITE_FUNCTION_EVENT_DATA"))
     # file_id = event_data["$id"]
 
